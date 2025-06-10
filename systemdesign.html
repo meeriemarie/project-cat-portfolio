@@ -1,0 +1,103 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="conceptStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Markazi+Text:wght@400..700&display=swap"
+        rel="stylesheet">
+    <title> CCL4 Portfolio </title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href="index.html"> Concept </a>
+            <a class="active" href="https://meeriemarie.github.io/project-cat-portfolio/systemdesign.html"> System
+                Design </a>
+            <a href="https://meeriemarie.github.io/project-cat-portfolio/systemIS.html"> System
+                Infrastructure </a>
+        </div>
+    </header>
+    <div class="main">
+        <h2 class="subtitle"> Overview </h2>
+        <p class="content">
+            This system design outlines the functional relationships between the core characters (player cat, human
+            chaser)
+            and the evolving structure of the game world (scenes/rooms) as the player progresses. The design focuses on
+            the
+            flow of gameplay from room to room, conditions for progression, and interactions between player and NPC.
+        </p>
+
+        <h2 class="subtitle"> Characters </h2>
+        <h3 class="item"> Cat (Player) </h3>
+        <ul class="content">
+            <li>Starts in the hallway.</li>
+            <li>Can explore and interact with destructible objects.</li>
+            <li>Progresses by destroying a set number of objects per room.</li>
+            <li>Triggers room unlocks and human chaser spawn.</li>
+        </ul>
+
+        <h3 class="item"> Human (Chaser #1) </h3>
+        <ul class="content">
+            <li>Only spawns once the player unlocks the bedroom.</li>
+            <li>Actively chases the cat after spawning.</li>
+            <li>If the cat is caught, the game resets to the beginning.</li>
+            <li>Does not appear before the bedroom is unlocked so the player can familiarize themselves with the game.
+            </li>
+        </ul>
+
+        <h3 class="item"> Dog (Chaser #2) </h3>
+        <ul class="content">
+            <li>Only Spawns once the player unlocks more rooms (mid/late-game).</li>
+            <li>Faster than the Human and operates on simpler, aggressive AI.</li>
+            <li>If the cat is caught, the game resets to the beginning.</li>
+            <li>Does not appear before mid/late-game milestone so the player can familiarize themselves with the Human
+                (Chaser #1).</li>
+        </ul>
+
+        <h2 class="subtitle"> Scenes / Rooms </h2>
+        <table class="table">
+            <thead>
+                <tr class="rows">
+                    <th>Room</th>
+                    <th>Entry Condition</th>
+                    <th>Exit Condition / Unlock Trigger</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rows">
+                    <td class="bold">Hallway</td>
+                    <td>Default starting location</td>
+                    <td>Destroy objects to unlock Living Room</td>
+                </tr>
+                <tr class="rows">
+                    <td class="bold">Living Room</td>
+                    <td>Unlocked from the start</td>
+                    <td>Destroy objects to unlock Bedroom</td>
+                </tr>
+                <tr class="rows">
+                    <td class="bold">Bedroom</td>
+                    <td>Unlock spawns human chaser</td>
+                    <td>Destroy objects to unlock next room</td>
+                </tr>
+                <tr class="rows">
+                    <td class="bold">Additional Rooms</td>
+                    <td>Progressively unlocked via object destruction</td>
+                    <td>Final score unlocks Apartment Exit</td>
+                </tr>
+                <tr class="rows">
+                    <td class="bold">Exit</td>
+                    <td>Only unlocked at final score threshold</td>
+                    <td>Player must reach this room to win</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="subtitle"> Class Relationship Diagram </h2>
+        <img src="./images/SystemDesign.png" alt="System Design" style="width: 100%;" class="image">
+    </div>
+</body>

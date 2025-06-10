@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="conceptStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Markazi+Text:wght@400..700&display=swap"
+        rel="stylesheet">
+    <title> CCL4 Portfolio </title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a class="active" href="index.html"> Concept </a>
+            <a href="https://meeriemarie.github.io/project-cat-portfolio/systemdesign.html"> System Design </a>
+            <a href="https://meeriemarie.github.io/project-cat-portfolio/systemIS.html"> System Infrastructure </a>
+        </div>
+    </header>
+
+    <div class="main">
+        <h1> Concept </h1>
+        <h2 class="subtitle"> Storyline </h2>
+        <p class="content">
+            You are a stray cat seeking shelter from a heavy storm. You sneak into an apartment at night through an open
+            window, but in the morning, the window is closed — and now you're trapped inside.
+
+            Find your way out before you're made a meager house cat and the ridicule of the neighborhood.
+
+            To escape, you'll need to cause chaos by knocking over objects, scratching furniture, and exploring the
+            apartment. The more mess you make, the more points you earn. These points unlock access to new rooms (e.g.
+            living room, kitchen, bathroom) and ultimately, the front door.
+        </p>
+        <br>
+        <p class="content">
+            <b>But be careful…</b>
+        </p>
+        <ul class="content">
+            <li>The human starts patrolling the apartment. If they catch you, it’s all over — you’ll be adopted, losing
+                your freedom forever.</li>
+
+            <li>Worse still, there’s a dog in the apartment too. Unlike the human, the dog is fast and unpredictable,
+                adding an extra layer of tension.</li>
+        </ul>
+        <br>
+        <p class="content">
+            You’ll have to hide, sneak, and dash your way through this chaos-filled apartment if you want to escape back
+            to
+            your wild life.
+        </p>
+
+        <h2 class="subtitle"> Gameplay Loop </h2>
+
+        <ul class="content">
+            <li>Start in hallway (first zone).</li>
+            <li>Cause chaos to earn points.</li>
+            <li>Unlock next area when enough points are gathered.</li>
+            <li>Avoid enemies while continuing to wreak havoc.</li>
+            <li>Avoid enemies while continuing to wreak havoc.</li>
+            <li>Reach the final exit door to escape.</li>
+            <li>Fail Condition: Get caught by either the human or dog = Game Over (Adoption).</li>
+            <li>Win Condition: Escape through the front door = Stay wild.</li>
+        </ul>
+
+        <h2 class="subtitle"> Features </h2>
+        <table class="table">
+            <thead>
+                <tr class="rows">
+                    <th>Feature</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="rows">
+                    <td>Score System</td>
+                    <td>Earn points by interacting with and damaging objects.</td>
+                </tr>
+                <tr class="rows">
+                    <td>Unlockable Rooms</td>
+                    <td>Reach point thresholds to open new rooms in a linear progression: Bedroom → Living Room →
+                        Kitchen → Bathroom → Exit.</td>
+                </tr>
+                <tr class="rows">
+                    <td>Procedural Object Spawning</td>
+                    <td>Items are randomly placed per room on each playthrough (e.g., toilet paper in bathroom, cups in
+                        kitchen).</td>
+                </tr>
+                <tr class="rows">
+                    <td>Human Chaser</td>
+                    <td>Patrolling enemy with sound and vision-based detection. Moves slowly, but uses smart search
+                        behavior.</td>
+                </tr>
+                <tr class="rows">
+                    <td>Dog Chaser</td>
+                    <td>Introduced mid/late-game. Fast, has a dash ability, and operates on simpler, aggressive AI.</td>
+                </tr>
+                <tr class="rows">
+                    <td>Stealth & Hiding</td>
+                    <td>Hide under furniture, manage noise levels, and break line-of-sight to survive.</td>
+                </tr>
+                <tr class="rows">
+                    <td>Failure State</td>
+                    <td>Getting caught triggers the adoption ending.</td>
+                </tr>
+                <tr class="rows">
+                    <td>Victory State</td>
+                    <td>Users do not get warned about losing their progress when cancelling post creation</td>
+                </tr>
+                <tr class="rows">
+                    <td>Replayability</td>
+                    <td>Escape through the front door to preserve your stray cat lifestyle.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="subtitle"> Aesthetic </h2>
+        <h3 class="item"> Environment </h3>
+        <img src="./images/Environment.png" alt="Environment" style="width: 100%;" class="image">
+        <h3 class="item"> Characters </h3>
+        <img src="./images/Characters.png" alt="Characters" style="width: 100%;" class="image">
+        <h3 class="item"> Game References </h3>
+        <img src="./images/GameReferences.png" alt="Game References" style="width: 100%;" class="image">
+        <h3 class="item"> UI </h3>
+        <img src="./images/UI.png" alt="UI" style="width: 100%;" class="image">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="stylesheet" type="text/css" href="conceptStyles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Markazi+Text:wght@400..700&display=swap"
+        rel="stylesheet">
+    <title> CCL4 Portfolio </title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href="index.html"> Concept </a>
+            <a href="https://meeriemarie.github.io/project-cat-portfolio/systemdesign.html"> System Design </a>
+            <a class="active" href="https://meeriemarie.github.io/project-cat-portfolio/systemIS.html"> System
+                Infrastructure </a>
+        </div>
+    </header>
+    <div class="main">
+        <h2 class="subtitle"> Overview </h2>
+        <p class="content">
+            The game is built with modular, component-based architecture in Unity. Each gameplay system (player control,
+            interaction, AI, scoring, UI, etc.) is represented through dedicated C# classes and MonoBehaviours. Below is
+            the
+            class design structure focusing on relationships, not detailed implementation.
+        </p>
+
+        <h2 class="subtitle"> Class Relationship Diagram </h2>
+        <img src="./images/GameManager.png" alt="Game Manager" style="width: 100%;" class="image">
+        <img src="./images/RoomManager.png" alt="Room Manager" style="width: 100%;" class="image">
+        <img src="./images/Controller.png" alt="Controller" style="width: 100%;" class="image">
+        <img src="./images/Enemies.png" alt="Enemies" style="width: 100%;" class="image">
+    </div>
+</body>
